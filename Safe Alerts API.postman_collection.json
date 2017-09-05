@@ -1,0 +1,33 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Safe Alerts API",
+		"_postman_id": "ac41fdda-cd9b-3d5c-fb45-323bb2610160",
+		"description": "Get contextual safety-focused alerts that indicate the accident risk type for a specified location. Safe Alerts identifies accident \"hot spots\" and their corresponding categories (e.g., side swipe, rear ending) and is based on historical accident information.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getSafeAlerts",
+			"request": {
+				"url": "https://api-beta.arity.com/safeAlert/v1/location?geometry={{geometry}}&radius=0.001",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml, application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Get alerts that indicate accident risks for a specified location. Safe Alerts identifies accident \"hot spots\" and their corresponding categories (e.g., side swipe, hit fixed object, rear ending, etc.) and is based on historical accident information.  Requires location geometry to be specified in Well Known Text format. "
+			},
+			"response": []
+		}
+	]
+}
